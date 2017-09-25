@@ -1,0 +1,485 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+        <script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var strcount
+var x = new Date()
+document.getElementById('ct').innerHTML = x;
+tt=display_c();
+}
+</script>  
+        
+        
+        
+        
+      <style type="text/css">  
+        
+          
+          #main_section{
+              
+              width:100%;
+              height:145%;
+              //border:1px solid gray;
+              
+              //-webkit-border-radius: 20px;
+              margin-top: -1%;
+              background-color: #D5DBDB;
+              
+          }
+          
+          
+          #header{
+              
+              width:98.5%;
+              border:1px solid gray;
+              margin-top: 2%;
+              height:5%;
+              background-color: #F0F8FF;
+              -webkit-border-radius: 20px;
+              margin-left: 0.5%;
+              
+              
+              
+          }   
+          
+          
+          #header1{
+              
+              width:98.5%;
+              border:1px solid gray;
+              margin-top: 2%;
+              height:5%;
+              background-color: #F0F8FF;
+              -webkit-border-radius: 20px;
+              margin-left: 0.5%;
+              
+          }   
+          
+          
+           #header2{
+              
+              width:98.5%;
+              border:1px solid gray;
+              margin-top: 3%;
+              height:5%;
+              background-color: #F0F8FF;
+              -webkit-border-radius: 20px;
+              margin-left: 0.5%;
+              
+          }   
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          h1{
+              
+              font-size: 15px;
+              padding-left: 10px;
+              padding-bottom: 10px;
+              font-family: Arial;
+          }
+          
+          
+          
+          #personal_details{
+              
+              padding-left: 10px;
+              
+          }
+          
+          #time{
+              
+              text-align: right;
+              font-size: 25px;
+              margin-right: 25px;
+              padding-top: 20px;
+              color:blue;
+          }
+          
+          #instn{
+              
+              
+              
+          }
+          
+          h3{
+              
+              text-align: left;
+              color:red;
+              
+              margin-left: 2%;
+              margin-top: 1%;
+          }
+          
+          
+          #title{
+              
+              
+          }
+          
+          h4{
+              
+              text-align: center;
+              font-size: 25px;  
+              padding-top: 10px;
+              color: #000099;
+              text-decoration: underline;
+          }
+          
+          
+      </style>    
+      
+      <script type="text/javascript">
+function validation()
+{
+var a = document.form.pwd.value;
+if(a=="")
+{
+alert("Please Enter Your Password");
+document.form.pwd.focus();
+return false;
+}
+
+if ((a.length < 4) || (a.length > 8))
+{
+alert("Your Password must be 4 to 8 Character");
+document.form.pwd.select();
+return false;
+}
+
+
+
+
+}
+
+
+
+</script>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        
+    </head>    
+    
+   
+    
+    
+    
+    
+    
+    
+    <div id="main_section">
+        
+        <div id="title">
+            <h4>New User Registration</h4>
+            
+        </div>
+        
+        <div id="instn">
+            
+            
+            <h3><br><br>Note:Fields marked asterisk (*) are mandatory.</h3>
+            
+            
+        </div>
+        
+        
+        <div id="time">
+        
+    <body onload=display_ct();>
+<span id='ct'></span>
+
+        </div>
+    <div id="header">
+        
+        
+        <h1>Personal Details</h1>   
+        
+        
+        
+    </div>  
+        <br>
+        
+        <div id="personal_details">
+        
+        
+        <table border="1" width="99%" cellpadding="2">
+            
+            
+            <tr>            
+                
+                <td>Customer Type &nbsp&nbsp</td>
+                        <td>
+                            
+                            <form name="form" onsubmit="return validation()" method="post"action="bank_reg">
+                            <select name="customer_type" >
+                                
+                                <option>Select type</option>
+                                <option>Public</option>
+                                <option>Staff</option>
+                                
+                            </select>   
+                            
+                            
+                        </td>
+                
+                
+            </tr>
+            
+            
+            
+            <tr>            
+                
+                <td>Name*</td>
+                        <td>
+                           <select name="prefix">
+                               <option>Mr.</option>
+                               <option>Mrs.</option>
+                               <option>Ms.</option>
+                               <option>Others.</option>
+                           </select>
+                            
+                            
+                            <input type="text" name="firstname" placeholder="Firstname.." required>
+                            <input type="text" name="middlename" placeholder="Middlename.."required>
+                            <input type="text" name="lastname" placeholder="Lastname.."required>
+                        </td>
+                
+                
+            </tr>
+            
+            
+            
+         <tr>            
+                
+                <td>Name of Gurdian*</td>
+                        <td>
+                           <select name="gurdian_prefix">
+                               <option>Mr.</option>
+                               <option>Mrs.</option>
+                               <option>Ms.</option>
+                               <option>Others.</option>
+                           </select>
+                            
+                            
+                            <input type="text" name="gurdian_name" placeholder="Gurdian Name.." size="70" required>
+                            
+                
+              
+            </tr>
+            
+            
+         <tr>            
+                
+                <td>Date of Birth*</td>
+                        <td>
+                           
+                            
+                            <input type="date" name="dob" required>
+                        </td>
+                        
+                        
+                       
+              
+            </tr>
+            
+         
+            <tr>            
+                
+                <td>Gender</td>
+                        <td>
+                           
+                            <select name="gender">
+                                
+                                <option>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                
+                            </select>
+                                
+            </tr>
+         
+             <tr>            
+                
+                <td>Nationality*</td>
+                        <td>
+                           
+                            
+                            <input type="text" name="nationality" required>
+                        </td>
+                               
+           
+            
+         
+            
+            
+        
+                        
+                        
+                       
+              
+            </tr>
+         
+            
+            
+            
+        </table>     
+            
+             
+    </div>      
+            
+        
+        <div id="header1">
+
+            
+            <h1>Correspondence Address(Current Residential/Office)</h1>
+            <table border="1" width="99%">
+                
+                <tr>
+                    
+                    <td> Landmark/Street*</td>  
+                    <td><input type="text" name="landmark" size="80" Placeholder="Street/Road Name/Block" required></td>
+                 
+                </tr>
+                
+                
+                <tr>
+                    
+                    <td>District:*</td>
+                    <td><input type="text" name="district" size="40" placeholder="District Name" required>
+                    
+                    
+                </tr>   
+                
+                
+                <tr>
+                    <td>State*</td>
+                    <td><input type="text" name="state" size="40" placeholder="State Name" required>
+                    
+                    
+                </tr>
+                
+                
+                <tr>
+                    <td>Mobile Number*</td>
+                    <td><input type="text" name="phone_no" size="40" placeholder="Mobile No."required></td>
+                    
+                    
+                </tr>
+                
+                
+                <tr>
+                    <td>Email Address*</td>
+                    <td><input type="email" name="email" size="40" placeholder="Email Address."required></td>
+                    
+                    
+                </tr>
+                
+                
+              
+                    <h1>      </h1>
+                <tr>
+                    <td>Select any security question?*</td>    
+              
+                    <td>
+                        <select name="que">  
+        <option>Select Security Question</option>                    
+        <option>What is your favourite website?</option>
+        <option>What is your favourite programming language?</option>
+        <option>What is your first school name?</option>
+        <option>What is your first teacher name?</option>
+        <option>What is your favourite movie? </option> 
+    </select>  
+                    </td>        
+                
+                </tr>
+                
+                
+                <tr>
+                    
+                    <td>Your Security Answer:*</td>
+                    
+         
+                    
+                     
+                
+                
+               
+                    
+                    <td><input type="text" name="ans" size="40" Placeholder="Your security answer"required</td>
+                    
+         
+                    
+                </tr>       
+                
+                
+                <tr>
+                    
+                    <td>Choose any password:*</td>
+                    <td><input type="password" name="pwd" size="40" placeholder="Password must be in between 4 to 8 characters"></td>
+                    
+                </tr>
+               
+                
+                
+                 <tr>
+                    
+                    <td>Balance:*</td>
+                    <td><input type="text" name="balance" size="40" placeholder="Enter amount for account opening"></td>
+                    
+                </tr>
+               
+                
+                
+                
+            </table>
+            <br>
+            <center> <input type="submit" value="PROCEED">&nbsp&nbsp;
+            <input type="submit" value="RESET">
+            
+            </form>
+        </div>     
+        
+        
+        
+        
+            
+      
+    
+    
+    
+    
+    
+    </div> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+    
+</html>
